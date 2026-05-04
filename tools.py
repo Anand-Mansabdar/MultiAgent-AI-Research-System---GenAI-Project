@@ -47,4 +47,13 @@ def scrape_data(url : str) -> str:
         str: A string containing the scraped data, such as text or relevant information
         extracted from the webpage.
     """
-  pass
+  try:
+    response = req.get(url, timeout=8, headers={"User-Agent": "Mozilla/5.0"})
+    soup = BeautifulSoup(response.text, "html.parser")
+    for tag in soup(["script", "style", "nav", "footer"]):
+      tag.decompose()
+    return soup.get_text(separator=" ", strip=True)[:3000]
+  except Exception as e:
+    return f"Could not scrape URL: {str(e)}"
+  
+print(scrape_data.invoke("https://en.wikipedia.org/wiki/Main_Page"))
