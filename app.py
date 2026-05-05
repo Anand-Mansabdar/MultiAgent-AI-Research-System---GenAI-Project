@@ -16,6 +16,7 @@ st.markdown(
     <style>
     .main-header {{ color: {ACCENT_COLOR}; font-size: 3rem; font-weight: 900; letter-spacing: -0.03em; }}
     .website-name {{ color: {ROSE_COLOR}; font-size: 1.35rem; font-weight: 700; margin-top: 6px; }}
+    .app-description {{ color: #666; font-size: 1rem; font-weight: 500; margin-top: 8px; }}
     .section-header {{ color: {ROSE_COLOR}; }}
     .step-card {{ border-radius: 18px; padding: 18px; margin-bottom: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }}
     .step-label {{ font-size: 1rem; font-weight: 700; margin-bottom: 6px; }}
@@ -27,6 +28,7 @@ st.markdown(
 
 st.markdown('<div class="main-header">ResearchFlow AI</div>', unsafe_allow_html=True)
 st.markdown('<div class="website-name">MultiAgent AI Research System — intelligent research, scraping, writing, and critique</div>', unsafe_allow_html=True)
+st.markdown('<div class="app-description">Automate your research workflow with AI agents that search, scrape, write reports, and provide critical feedback.</div>', unsafe_allow_html=True)
 st.markdown(
     """
     <p style='font-size:1.05rem; color:#333333;'>
