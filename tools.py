@@ -33,7 +33,7 @@ def web_search(query : str) -> str:
   
   return "\n---------------------------------\n".join(final_results)
 
-print(web_search.invoke("Tell me about the recent news about elections in West Bengal, India"))
+# print(web_search.invoke("Tell me about the recent news about elections in West Bengal, India"))
 
 @tool
 def scrape_data(url : str) -> str:
@@ -56,4 +56,4 @@ def scrape_data(url : str) -> str:
   except Exception as e:
     return f"Could not scrape URL: {str(e)}"
   
-print(scrape_data.invoke("https://en.wikipedia.org/wiki/Main_Page"))
+# print(scrape_data.invoke("https://en.wikipedia.org/wiki/Main_Page"))
